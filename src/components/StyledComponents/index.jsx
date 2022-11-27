@@ -14,7 +14,7 @@ export const StyledComponents = () => {
   const modalTitle = (
     <>
       <span>styled-components</span>
-      <StyledIcons className='icons'>
+      <StyledIcons>
         <Icon isFullscreen={isFullscreen} handleFullscreen={handleFullscreen} />
         <CloseOutlined onClick={handleCancel} />
       </StyledIcons>

@@ -14,7 +14,7 @@ export const EmotionStyled = () => {
   const modalTitle = (
     <>
       <span>EmotionStyled</span>
-      <StyledIcons className='icons'>
+      <StyledIcons >
         <Icon isFullscreen={isFullscreen} handleFullscreen={handleFullscreen} />
         <CloseOutlined onClick={handleCancel} />
       </StyledIcons>
