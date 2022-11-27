@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import classNames from "classnames";
 import { Button, Modal } from 'antd';
 import { ArrowsAltOutlined, CloseOutlined, ShrinkOutlined } from '@ant-design/icons';
+import classNames from "classnames";
 import styles from './style.module.scss';
 
 export const CssModules = () => {
