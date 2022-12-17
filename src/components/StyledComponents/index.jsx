@@ -22,10 +22,13 @@ export const StyledComponents = () => {
   );
 
   return (
-    <StyledContainer>
-      <StyledButton type="primary" onClick={showModal}>
-        styled-components
-      </StyledButton>
+    <>
+      <StyledContainer>
+        <StyledButton type="primary" onClick={showModal}>
+          styled-components
+        </StyledButton>
+      </StyledContainer>
+      
       <StyledModal
         closable={false}
         isFullscreen={isFullscreen}
@@ -38,8 +41,8 @@ export const StyledComponents = () => {
         <p>styled-components</p>
         <p>styled-components</p>
       </StyledModal>
-    </StyledContainer>
-  )
+    </>
+  );
 };
 
 const Icon = ({ isFullscreen, handleFullscreen }) => (

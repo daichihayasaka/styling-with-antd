@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { css } from '@emotion/react'
 import { Button, Modal } from 'antd';
 import { ArrowsAltOutlined, CloseOutlined, ShrinkOutlined } from '@ant-design/icons';
+import { containerStyle, buttonStyle, modalStyle, iconsStyle } from './style';
 
 export const EmotionReact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,44 +13,6 @@ export const EmotionReact = () => {
   const handleOk = () => setIsModalOpen(false);
   const handleCancel = () => setIsModalOpen(false);
   const handleFullscreen = () => setIsFullscreen(!isFullscreen);
-
-  const containerStyle = css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 16px;
-  `;
-
-  const modalStyle = css`
-    top: ${isFullscreen && 0};
-    padding: ${isFullscreen && 0};
-    height: ${isFullscreen && '100vh'};
-    margin: ${isFullscreen && 0};
-    .ant-modal-content {
-      width: ${isFullscreen && '100vw'};
-      height: ${isFullscreen && '100%'};
-    }
-    .ant-modal-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      
-    }
-  `;
-
-  const buttonStyle = css`
-    width: 320px;
-    height: 40px;
-    font-size: 16px;
-  `
-
-  const iconsStyle = css`
-    display: flex;
-    span {
-      margin-left: 8px;
-    }
-  `;
 
   const modalTitle = (
     <>
@@ -65,13 +28,16 @@ export const EmotionReact = () => {
   );
 
   return (
-    <div css={containerStyle}>
-      <Button type="primary" onClick={showModal} css={buttonStyle}>
-        EmotionReact
-      </Button>
+    <>
+      <div css={containerStyle}>
+        <Button type="primary" onClick={showModal} css={buttonStyle}>
+          EmotionReact
+        </Button>
+      </div>
+
       <Modal
         closable={false}
-        css={modalStyle}
+        css={modalStyle(isFullscreen)}
         isFullscreen={isFullscreen}
         onCancel={handleCancel}
         onOk={handleOk}
@@ -82,8 +48,8 @@ export const EmotionReact = () => {
         <p>EmotionReact</p>
         <p>EmotionReact</p>
       </Modal>
-    </div>
-  )
+    </>
+  );
 };
 
 const Icon = ({ isFullscreen, handleFullscreen }) => (

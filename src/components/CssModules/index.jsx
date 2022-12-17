@@ -29,10 +29,13 @@ export const CssModules = () => {
   });
 
   return (
-    <div className={styles.container}>
-      <Button type="primary" onClick={showModal} className={styles.button}>
-        CSS Modules
-      </Button>
+    <>
+      <div className={styles.container}>
+        <Button type="primary" onClick={showModal} className={styles.button}>
+          CSS Modules
+        </Button>
+      </div>
+      
       <Modal
         className={modalClassNames}
         closable={false}
@@ -45,7 +48,7 @@ export const CssModules = () => {
         <p>CSS Modules</p>
         <p>CSS Modules</p>
       </Modal>
-    </div>
+    </>
   )
 };
 

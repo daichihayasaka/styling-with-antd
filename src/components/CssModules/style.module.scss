@@ -4,27 +4,27 @@
   align-items: center;
   justify-content: center;
   margin-top: 16px;
-}
 
-.button {
-  width: 320px;
-  height: 40px;
-  font-size: 16px;
-}
-
-.icons {
-  display: flex;
-
-  span {
-    margin-left: 8px;
+  .button {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 
-.modal:global(.ant-modal) {
+.modal {
   :global(.ant-modal-title) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .icons {
+      display: flex;
+
+      span {
+        margin-left: 8px;
+      }
+    }
   }
 
   &.fullscreen {

@@ -14,7 +14,7 @@ export const EmotionStyled = () => {
   const modalTitle = (
     <>
       <span>EmotionStyled</span>
-      <StyledIcons >
+      <StyledIcons>
         <Icon isFullscreen={isFullscreen} handleFullscreen={handleFullscreen} />
         <CloseOutlined onClick={handleCancel} />
       </StyledIcons>
@@ -22,10 +22,13 @@ export const EmotionStyled = () => {
   );
 
   return (
-    <StyledContainer>
-      <StyledButton type="primary" onClick={showModal}>
-        EmotionStyled
-      </StyledButton>
+    <>
+      <StyledContainer>
+        <StyledButton type="primary" onClick={showModal}>
+          EmotionStyled
+        </StyledButton>
+      </StyledContainer>
+
       <StyledModal
         closable={false}
         isFullscreen={isFullscreen}
@@ -38,8 +41,8 @@ export const EmotionStyled = () => {
         <p>EmotionStyled</p>
         <p>EmotionStyled</p>
       </StyledModal>
-    </StyledContainer>
-  )
+    </>
+  );
 };
 
 const Icon = ({ isFullscreen, handleFullscreen }) => (
