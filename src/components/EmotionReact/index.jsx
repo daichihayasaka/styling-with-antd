@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
+import { useState } from 'react';
 import { Button, Modal } from 'antd';
 import { ArrowsAltOutlined, CloseOutlined, ShrinkOutlined } from '@ant-design/icons';
 import { containerStyle, buttonStyle, modalStyle, iconsStyle } from './style';

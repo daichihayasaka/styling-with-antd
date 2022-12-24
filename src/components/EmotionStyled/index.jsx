@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowsAltOutlined, CloseOutlined, ShrinkOutlined } from '@ant-design/icons';
 import { StyledButton, StyledIcons, StyledContainer, StyledModal } from './style';
 
